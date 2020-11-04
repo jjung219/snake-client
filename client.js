@@ -10,6 +10,10 @@ const connect = function () {
 
   conn.on('connect', () => console.log("Successfully connected!"));
   conn.on('connect', () => conn.write("Name: JJ"));
+
+  // conn.on('connect', () => setTimeout(() => conn.write("Move: up")), 0)
+  // conn.on('connect', () => setInterval(() => setTimeout(() => conn.write("Move: up")), 50), 50);
+
   conn.on('data', data => console.log(data));
 
   return conn;
